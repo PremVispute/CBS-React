@@ -1,0 +1,21 @@
+.dashboard{
+    position: absolute; 
+    top: 3rem; 
+    left: 19rem; 
+    height: 35rem;
+    width: 65rem;
+}
+
+.head-content{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.card-text{
+    font-size: 15px;
+    width: 100%;
+}
+
+.dash-icon{
+    font-size: 25px;
+}

@@ -1,0 +1,38 @@
+.dropdown-main{
+    font-size: 13px;
+}
+
+.main-icon{
+    color: white;
+    margin-top: 5px;
+}
+
+.navbar{
+    background-color: #3b3a39;
+    height: 40px;
+}
+
+.bank-name{
+    width: 135rem;
+}
+
+.office-name{
+    width: 185rem; 
+    font-size: 13px;
+}
+
+.role-name{
+    font-size: 13px; 
+    position: relative;
+    left: 4rem;
+}
+
+.dropdown-main{
+    width: 50px; 
+    margin-right: 25px;
+}
+
+.dropdown-img{
+    height: 25px; 
+    width: 25px;
+}
