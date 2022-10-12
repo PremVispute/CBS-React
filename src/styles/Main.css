@@ -1,0 +1,30 @@
+.custinfo{
+    font-size: 14px;
+    margin-left: 4rem;
+    position: absolute;
+    top: 3rem;
+    width: 80rem;
+}
+
+.basic-details{
+    overflow: scroll;
+    height: 27rem;
+}
+
+.tick{
+    font-size: 20px;
+    color: green;
+}
+
+.cross{
+    font-size: 20px;
+    color: red;
+}
+
+.section-spacer{
+    border-bottom: groove;
+}
+
+.nav-pills{
+    --bs-nav-pills-link-active-bg: #675cb8;
+}

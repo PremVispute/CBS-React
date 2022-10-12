@@ -1,10 +1,10 @@
-import NavBar from './components/layouts/Header/NavBar'
+import NavBarMain from './components/layouts/Header/NavBarMain'
 import SideBarMain from './components/layouts/SideBar/SideBarMain'
 
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBarMain />
       <SideBarMain />
     </>
   );

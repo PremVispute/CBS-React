@@ -2,13 +2,14 @@ import SearchBar from './SearchBar'
 import Notifications from './Notifications'
 import '../../../styles/Header.css'
 import ProfilePic from '../../../assets/images/profile_pic.png'
-
+import DropdownData from '../../../data/DropdownData'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Dropdown from 'react-bootstrap/Dropdown'
 
 function NavBar() {
   return (
+    <>
     <Navbar fixed="top" className='navbar' variant="dark" expand="lg">
       <Container fluid>
         <Container className='bank-name'>
@@ -27,27 +28,18 @@ function NavBar() {
             <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
               <img className='dropdown-img' src={ProfilePic} alt="Profile Pic"></img>
             </Dropdown.Toggle>
-            <Dropdown.Menu variant="dark">              
-              <Dropdown.Item href="#/action-1" className="dropdown-main">
-                Change Password
+            <Dropdown.Menu variant="dark">     
+              {DropdownData.map(DropdownData => (
+                <Dropdown.Item key={DropdownData.id} href={DropdownData.link} className="dropdown-main">
+                {DropdownData.label}
               </Dropdown.Item>
-              <Dropdown.Item href="#/action-2" className="dropdown-main">
-                Turing Certificate
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-3" className="dropdown-main">
-                NPA Certificate
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-4" className="dropdown-main">
-                Change Photo
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-5" className="dropdown-main">
-                Log Out
-              </Dropdown.Item>
+              ))}
             </Dropdown.Menu>
           </Dropdown>
         </Container>
       </Container>
     </Navbar>
+    </>
   );
 }
 
