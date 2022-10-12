@@ -2,15 +2,12 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
-import Arrow from '../../Utilities/Arrow'
+import NavBarSecondary from './NavBarSecondary'
 
 const NavCustCreation = () => {
   return (
     <>
-        <Navbar className='navcustcreation1' bg='light' expand="lg">
-            <Arrow />
-            <h5 className='text-center w-100 pt-1'>Customer Information (Mode: View)</h5>
-        </Navbar>
+        <NavBarSecondary />
         <Navbar bg='light' className='navcustcreation1' expand="lg">
             <div className='col-md-3 me-3'>
                 <InputGroup size='sm'>

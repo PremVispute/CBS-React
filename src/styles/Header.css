@@ -37,6 +37,13 @@
     width: 25px;
 }
 
+.navcustcreation{
+    position: absolute;
+    top: 3rem;
+    width: 82rem;
+    border-bottom: groove;
+}
+
 .navcustcreation1{
     border-bottom: groove;
 }

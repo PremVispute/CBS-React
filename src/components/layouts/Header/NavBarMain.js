@@ -1,5 +1,5 @@
 import SearchBar from './SearchBar'
-import Notifications from './Notifications'
+// import Notifications from './Notifications'
 import '../../../styles/Header.css'
 import ProfilePic from '../../../assets/images/profile_pic.png'
 import DropdownData from '../../../data/DropdownData'

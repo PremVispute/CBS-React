@@ -5,14 +5,14 @@ const DashboardData = [
     {
         id: 1,
         icon: faUser,
-        href: "#/action1",
-        label: "Customer Creation (Individual)"
+        href: "/CustomerCreation(Individual)",
+        label: "Customer Creation: Individual"
     },
     {
         id: 2,
         icon: faUsers,
         href: "#/action2",
-        label: "Customer Creation (Non-Individual)"
+        label: "Customer Creation: Non-Individual"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const DashboardData = [
         id: 4,
         icon: faAddressCard,
         href: "#/action4",
-        label: "CASA (Account Creation)"
+        label: "CASA: Account Creation"
     },
     {
         id: 5,

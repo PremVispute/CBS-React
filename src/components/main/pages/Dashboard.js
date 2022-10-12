@@ -3,6 +3,7 @@ import '../../../styles/Dashboard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
@@ -14,12 +15,14 @@ const Dashboard = () => {
       </Container>
       <Container className='row text-center'>
         {DashboardData.map(DashboardData => (
-          <div className='col-md-4 mt-4'>
-          <Button className='card-text' variant="outline-secondary" size="lg" href={DashboardData.link}>
-            <FontAwesomeIcon className='dash-icon' icon={DashboardData.icon} /><br/>
-            {DashboardData.label}
-          </Button>
-        </div>
+          <div key={DashboardData.id} className='col-md-4 mt-4'>
+            <Link to={`/NavBarSecondary/${DashboardData.label}`}>
+              <Button className='card-text' variant="outline-secondary" size="lg">
+                <FontAwesomeIcon className='dash-icon' icon={DashboardData.icon} /><br/>
+                {DashboardData.label}
+              </Button>
+            </Link>
+          </div>
         ))}
       </Container>
     </div>

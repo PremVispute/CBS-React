@@ -28,3 +28,15 @@
 .nav-pills{
     --bs-nav-pills-link-active-bg: #675cb8;
 }
+
+.modepage{
+    position: absolute;
+    top: 8rem;
+    left: 4rem;
+    width: 80rem;
+}
+
+.modepage-text{
+    font-size: 15px;
+    width: 100%;
+}

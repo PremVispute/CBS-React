@@ -5,7 +5,7 @@ import { faGaugeHigh, faUserLock, faFolderTree, faArrowRightFromBracket, faUsers
 const SidebarMainData = [
     {
         id: 1,
-        link: "#link1",
+        link: "/",
         icon: faGaugeHigh,
         label: "Dashboard"
     },
