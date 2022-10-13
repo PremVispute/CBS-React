@@ -17,7 +17,6 @@ const SearchBar = () => {
         <a href='#active1'>
           <FontAwesomeIcon className='me-5 ms-3 main-icon' icon={faMagnifyingGlass} />
         </a>
-        <FontAwesomeIcon className='ms-5 main-icon' icon={faBell} />
         </Form>
     </Container>
     </>

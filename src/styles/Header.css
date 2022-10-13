@@ -1,7 +1,3 @@
-.dropdown-main{
-    font-size: 13px;
-}
-
 .main-icon{
     color: white;
     margin-top: 5px;
@@ -28,8 +24,14 @@
 }
 
 .dropdown-main{
+    font-size: 13px;
     width: 50px; 
     margin-right: 25px;
+}
+
+.notifications{
+    font-size: 13px;
+    width: 20rem;
 }
 
 .dropdown-img{

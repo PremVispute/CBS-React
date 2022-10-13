@@ -1,5 +1,5 @@
 import SearchBar from './SearchBar'
-// import Notifications from './Notifications'
+import Notifications from './Notifications'
 import '../../../styles/Header.css'
 import ProfilePic from '../../../assets/images/profile_pic.png'
 import DropdownData from '../../../data/DropdownData'
@@ -19,6 +19,7 @@ function NavBar() {
           <Navbar.Text className='text-white'>1001 - Head Office | Working Date: 31 Aug 2022</Navbar.Text>
         </Container>
         <SearchBar />
+        <Notifications />
         <Container className='role-name'>
           <Navbar.Text className='text-white'>Prem</Navbar.Text><br />
           <Navbar.Text className='text-white'>Role: Sr Manager</Navbar.Text>

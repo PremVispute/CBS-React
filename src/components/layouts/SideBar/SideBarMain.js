@@ -18,10 +18,10 @@ import { Link } from 'react-router-dom'
     return (
       <>
       <div className='sidebar-main'>
-        <ListGroup defaultActiveKey="#link1">
+        <ListGroup defaultActiveKey="/">
           {SideBarMainData.map(SideBarMainData => (
-            <Link key={SideBarMainData.id}  to={SideBarMainData.link}>
-              <ListGroup.Item variant='dark' action>
+            <Link key={SideBarMainData.id} className='link' to={SideBarMainData.link}>
+              <ListGroup.Item variant='dark' key={SideBarMainData.id} action href={SideBarMainData.link}>
                 <FontAwesomeIcon className='me-3' icon={SideBarMainData.icon} />
                 <span className='sidebar-text'>
                   {SideBarMainData.label}

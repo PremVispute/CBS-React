@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { Link, useParams } from 'react-router-dom'
-import ModePageData from '../../../data/ModePageData'
+import ModePageCRMData from '../../../data/ModePageCRMData'
 
 const ModePage = () => {
     // const {label} = useParams()
@@ -10,15 +10,21 @@ const ModePage = () => {
     <>
     <div className='modepage'>
         <div className='row text-center'>
-            {ModePageData.map(ModePageData => (
-                <div key={ModePageData.id} className='col-md-3 mt-5'>
-                    {/* <Link to={`/CustomerCreation/${ModePageData.label}`}> */}
+            {ModePageCRMData.map(ModePageCRMData => (
+              <>
+              {ModePageCRMData.display === "Yes" ?                
+                <div key={ModePageCRMData.id} className='col-md-3 mt-5'>
+                    {/* <Link to={`/CustomerCreation/${ModePageCRMData.label}`}> */}
                     <Button className='modepage-text' variant="outline-secondary" size="lg">
-                        <FontAwesomeIcon className='dash-icon mb-2' icon={ModePageData.icon} /><br/>
-                        {ModePageData.label}
+                        <FontAwesomeIcon className='dash-icon mb-2' icon={ModePageCRMData.icon} /><br/>
+                        {ModePageCRMData.label}
                     </Button>
                     {/* </Link> */}
                 </div>
+                : 
+                <></>                
+              }             
+              </>
             ))}
         </div>
       </div>

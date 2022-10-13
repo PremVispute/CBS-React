@@ -1,7 +1,6 @@
 import BasicDetailsData from '../../../data/BasicDetailsData'
 import '../../../styles/Main.css'
 import InputFields from '../../layouts/Utilities/Input Fields/InputFields'
-// import InputFields from '../../layouts/Utilities/Input Fields/InputFields'
 
 const BasicDetails = () => {
   return (

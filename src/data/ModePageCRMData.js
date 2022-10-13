@@ -1,26 +1,30 @@
 import { faEye, faUserPen, faShieldHalved, faPlus } from '@fortawesome/free-solid-svg-icons'
 
-const ModePageData = [
+const ModePageCRMData = [
     {
         id: 1,
         label: "View",
-        icon: faEye
+        icon: faEye,
+        display: "Yes"
     },
     {
         id: 2,
         label: "Edit",
-        icon: faUserPen
+        icon: faUserPen,
+        display: "Yes"
     },
     {
         id: 3,
         label: "Authorize",
-        icon: faShieldHalved
+        icon: faShieldHalved,
+        display: "Yes"
     },
     {
         id: 4,
         label: "Create",
-        icon: faPlus
+        icon: faPlus,
+        display: "Yes"
     },
 ]
 
-export default ModePageData
+export default ModePageCRMData

@@ -1,6 +1,6 @@
-import { faGaugeHigh, faUserLock, faFolderTree, faArrowRightFromBracket, faUsersRectangle, faFileInvoice, 
+import { faGaugeHigh, faUserLock, faFolderTree, faArrowRightFromBracket, faUsersRectangle, 
     faDesktop, faMoneyBillTransfer, faHandHoldingDollar, faMoneyCheckDollar,
-    faMoneyBillTrendUp, faDoorClosed } from '@fortawesome/free-solid-svg-icons'
+    faMoneyBillTrendUp, faDoorClosed, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 const SidebarMainData = [
     {
@@ -36,7 +36,7 @@ const SidebarMainData = [
     {
         id: 6,
         link: "#link6",
-        icon: faFileInvoice,
+        icon: faBookOpen,
         label: "Account Master"
     },
     {
