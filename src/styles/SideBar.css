@@ -18,17 +18,8 @@
     height: 90%;
     font-size: 13px;
     display: none;
-}
-
-.sidebar-transactions{
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    width: 15rem;
     max-height: 90%;
     overflow: scroll;
-    font-size: 13px;
-    display: none;
 }
 
 .link{

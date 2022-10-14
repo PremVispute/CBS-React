@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-bootstrap/Dropdown'
+import NotificationsData from '../../../data/NotificationsData'
 
 const Notifications = () => {
   return (
@@ -10,30 +11,36 @@ const Notifications = () => {
           <FontAwesomeIcon className='ps-1 main-icon' icon={faBell} />
         </Dropdown.Toggle>
         <Dropdown.Menu variant="dark">
-          <div className='row'>
-            <div className='col-md-9'>
-              <Dropdown.ItemText className="notifications">
-                <b>CRM</b>
-              </Dropdown.ItemText>
+          {NotificationsData.map(NotificationsData => (
+            <div key={NotificationsData.id}>
+              <div className='row'>
+                <div className='col-md-8'>
+                  <Dropdown.ItemText className="notifications">
+                    <b>{NotificationsData.heading1}</b>
+                  </Dropdown.ItemText>
+                </div>
+                <div className='col-md-4'>
+                  <Dropdown.ItemText className="notifications">
+                    <b>{NotificationsData.heading2}</b> 
+                  </Dropdown.ItemText>
+                </div>
+              </div>
+              {NotificationsData.fields.map(fields => (
+                <div key={fields.id} className='row'>
+                  <div className='col-md-8'>
+                    <Dropdown.Item href="#" className="notifications">
+                      {fields.label}
+                    </Dropdown.Item>
+                  </div>
+                  <div className='col-md-4'>
+                    <Dropdown.ItemText className="notifications">
+                      {fields.count}
+                    </Dropdown.ItemText>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className='col-md-3'>
-              <Dropdown.ItemText className="notifications">
-                <b>Count</b> 
-              </Dropdown.ItemText>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-md-9'>
-              <Dropdown.Item href="#" className="notifications">
-                Customer Creation: Individual
-              </Dropdown.Item>
-            </div>
-            <div className='col-md-3'>
-              <Dropdown.ItemText className="notifications">
-                0
-              </Dropdown.ItemText>
-            </div>
-          </div>
+          ))}
         </Dropdown.Menu>
       </Dropdown>
     </>

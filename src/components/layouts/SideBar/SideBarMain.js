@@ -1,14 +1,5 @@
 import ListGroup from 'react-bootstrap/ListGroup'
-import SideBarAdmin from './SideBarAdmin'
-import SideBarProductMaster from './SideBarProductMaster'
-import SideBarMiscellaneous from './SideBarMiscellaneous'
-import SideBarAccountMaster from './SideBarAccountMaster'
-import SideBarCRM from './SideBarCRM'
-import SideBarTransactions from './SideBarTransactions'
-import SideBarLoans from './SideBarLoans'
-import SideBarRemittance from './SideBarRemittance'
-import SideBarTDModule from './SideBarTDModule'
-import SideBarLocker from './SideBarLocker'
+import SideBarSecondary from './SideBarSecondary'
 import SideBarMainData from '../../../data/SideBarMainData'
 import '../../../styles/SideBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,6 +8,7 @@ import { Link } from 'react-router-dom'
   const SideBarMain = () => {
     return (
       <>
+      <SideBarSecondary />
       <div className='sidebar-main'>
         <ListGroup defaultActiveKey="/">
           {SideBarMainData.map(SideBarMainData => (
@@ -30,18 +22,8 @@ import { Link } from 'react-router-dom'
             </Link>
           ))}
         </ListGroup>
-      </div>
-      <SideBarAdmin />   
-      <SideBarProductMaster />
-      <SideBarMiscellaneous />
-      <SideBarCRM />
-      <SideBarAccountMaster />
-      <SideBarTransactions />
-      <SideBarLoans />
-      <SideBarRemittance />
-      <SideBarTDModule />
-      <SideBarLocker />
-    </>
+      </div>      
+      </>
     )
   }
 
