@@ -2,79 +2,79 @@ import { faGaugeHigh, faUserLock, faFolderTree, faArrowRightFromBracket, faUsers
     faDesktop, faMoneyBillTransfer, faHandHoldingDollar, faMoneyCheckDollar,
     faMoneyBillTrendUp, faDoorClosed, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
-const SidebarMainData = [
+const SideBarMainData = [
     {
-        id: 1,
+        id: 0,
         link: "/",
         icon: faGaugeHigh,
         label: "Dashboard"
     },
     {
-        id: 2,
+        id: 1,
         link: "#link2",
         icon: faUserLock,
         label: "Admin"
     },
     {
-        id: 3,
+        id: 2,
         link: "#link3",
         icon: faFolderTree,
         label: "Product Master"
     },
     {
-        id: 4,
+        id: 3,
         link: "#link4",
         icon: faArrowRightFromBracket,
         label: "Miscellaneous"
     },
     {
-        id: 5,
+        id: 4,
         link: "#link5",
         icon: faUsersRectangle,
         label: "CRM"
     },
     {
-        id: 6,
+        id: 5,
         link: "#link6",
         icon: faBookOpen,
         label: "Account Master"
     },
     {
-        id: 7,
+        id: 6,
         link: "#link7",
         icon: faMoneyBillTransfer,
         label: "Transactions"
     },
     {
-        id: 8,
+        id: 7,
         link: "#link8",
         icon: faHandHoldingDollar,
         label: "Loans and Advances"
     },
     {
-        id: 9,
+        id: 8,
         link: "#link9",
         icon: faMoneyCheckDollar,
         label: "Remittance"
     },
     {
-        id: 10,
+        id: 9,
         link: "#link10",
         icon: faMoneyBillTrendUp,
         label: "TD Module"
     },
     {
-        id: 11,
+        id: 10,
         link: "#link11",
         icon: faDoorClosed,
         label: "Locker Module"
     },
     {
-        id: 12,
+        id: 11,
         link: "#link12",
         icon: faDesktop,
         label: "Integrated Channels"
     }
 ]
 
-export default SidebarMainData
+export default SideBarMainData

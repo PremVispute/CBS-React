@@ -1,20 +1,16 @@
 import Navbar from 'react-bootstrap/Navbar'
+import {useNavigate} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Arrow = () => {
-    const style = {
-        transform: 'rotate(0deg)', 
-        transition: 'transform 150ms ease',
-    }
-
+  let navigate = useNavigate();
   return (
     <>
         <Navbar.Brand className='ps-3 pb-2'>
             <FontAwesomeIcon 
             className='arrow' 
-            style={style} 
-            // onClick={} 
+            onClick={() => navigate(-1)}
             icon={faArrowLeft} />
         </Navbar.Brand>
     </>

@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
+import '../../../styles/Main.css'
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import NavCustCreation from '../../layouts/Header/NavBars/NavCustCreation'
-import '../../../styles/Main.css'
 import CustInfoTabs from '../../../data/CustInfoTabs'
-import ModePage from '../../layouts/Utilities/ModePage'
+import NavBarSecondary from '../../layouts/Header/NavBars/NavBarSecondary'
 
-const CustomerInformation = () => {
+const CustomerInformation = (props) => {
     const [key, setKey] = useState('BasicDetails')
-
   return (
     <>
-    <ModePage />
-    {/* <div className='custinfo'>        
+    <NavBarSecondary label={props.label}/>
+    <div className='custinfo'>        
         <NavCustCreation />
         <Tabs
         activeKey={key}
@@ -27,7 +26,7 @@ const CustomerInformation = () => {
                 </Tab>
             ))}            
         </Tabs>
-    </div> */}
+    </div>
     </>
   )
 }

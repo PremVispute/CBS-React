@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import NavBarMain from './components/layouts/Header/NavBarMain'
-import NavBarSecondary from './components/layouts/Header/NavBars/NavBarSecondary'
 import SideBarMain from './components/layouts/SideBar/SideBarMain'
-import CustomerInformation from './components/main/pages/CustomerInformation'
 import Dashboard from './components/main/pages/Dashboard'
+import MainPage from './components/main/pages/MainPage'
 
 function App() {
   return (
@@ -12,8 +11,8 @@ function App() {
       <SideBarMain />
       <Routes>
         <Route path='/' element={<Dashboard />} />
-        <Route path='/NavBarSecondary/:label' element={<NavBarSecondary />} />
-        <Route path='/CustomerCreation/:label' element={<CustomerInformation />} />
+        <Route path='/NavBarSecondary/:label' element={<MainPage />} />
+        <Route path='/NavBarSecondary/CustomerCreation/:mode' element={<MainPage />} />
       </Routes>
     </>
   );

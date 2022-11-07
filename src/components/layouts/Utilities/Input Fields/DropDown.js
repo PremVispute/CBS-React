@@ -4,10 +4,10 @@ import InputGroup from 'react-bootstrap/InputGroup'
 const DropDown = (props) => {
   return (
     <>
-    <div key={props.data.id} className='col-md-5 mt-2'>
+    <div key={props.data.id} className='col-md-5 mt-1'>
         <InputGroup size='sm'>
-            <InputGroup.Text className='col-md-4'>{props.data.label}</InputGroup.Text>
-            <Form.Select size="sm" id={props.data.idGiven}>
+            <InputGroup.Text className='col-md-4 input'>{props.data.label}</InputGroup.Text>
+            <Form.Select size="sm" id={props.data.idGiven} className='input pb-0'>
                 <option value="-1">Select</option>
                 {props.data.options.map(options => (
                     <option>{options}</option>
