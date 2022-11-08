@@ -11,8 +11,8 @@ const SideBarMain = () => {
   const [sidebar, setSideBar] = useState(0)
 
   const toggleDiv = (id) => {
-    let something = SideBarSecondaryData.find(data => { return data.id === id })
-    setSideBar(something)
+    let sideBarSecondaryData = SideBarSecondaryData.find(data => { return data.id === id })
+    setSideBar(sideBarSecondaryData)
   }
 
   return (

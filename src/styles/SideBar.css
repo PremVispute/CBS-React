@@ -2,12 +2,12 @@
     margin-top: 6vh;
     height: 94vh; 
     background-color: black; 
-    /* width: 18rem; */
-    width: 3rem;
+    width: 18rem;
+    /* width: 3rem; */
 }
 
 .sidebar-text{
-    display: none;
+    /* display: none; */
 }
 
 .sidebar-secondary{
