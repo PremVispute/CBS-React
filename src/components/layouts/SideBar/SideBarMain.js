@@ -5,33 +5,24 @@ import SideBarSecondaryData from '../../../data/SideBarSecondaryData'
 import '../../../styles/SideBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 const SideBarMain = () => {
-  const [sidebar, setSideBar] = useState(null)
-  const sidebarRef = useRef(0)
-  
-  useEffect(() => {
-    console.log("useEffect: "+sidebar)
-  }, [sidebar])
+  const [sidebar, setSideBar] = useState(0)
 
   const toggleDiv = (id) => {
-    console.log("id: "+id)
-    console.log("sidebarRef: "+JSON.stringify(sidebarRef.current))
-    SideBarSecondaryData.map(data => (
-      data.id === id ? setSideBar(sidebarRef.current) : <></>
-    ))
-    console.log("sidebar-state: "+JSON.stringify(sidebar))
+    let something = SideBarSecondaryData.find(data => { return data.id === id })
+    setSideBar(something)
   }
 
   return (
-    <>      
-    {/* <SideBarSecondary data={sidebar}/> */}
+    <>
+    {sidebar && sidebar.id ? <SideBarSecondary data={sidebar}/> : null}   
     <div className='sidebar-main'>
       <ListGroup defaultActiveKey="/">
         {SideBarMainData.map(SideBarMainData => (
-          <>            
-          <Link key={SideBarMainData.id} className='link' onClick={() => toggleDiv(SideBarMainData.id)} to={SideBarMainData.link}>
+          <div key={SideBarMainData.id}>            
+          <Link className='link' onClick={() => toggleDiv(SideBarMainData.id)} to={SideBarMainData.link}>
             <ListGroup.Item variant='dark' key={SideBarMainData.id} action href={SideBarMainData.link}>
               <FontAwesomeIcon className='me-3' icon={SideBarMainData.icon} />
               <span className='sidebar-text'>
@@ -39,7 +30,7 @@ const SideBarMain = () => {
               </span>
             </ListGroup.Item>
           </Link>
-          </>
+          </div>
         ))}
       </ListGroup>
     </div>      

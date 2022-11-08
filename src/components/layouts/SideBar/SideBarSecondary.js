@@ -9,7 +9,7 @@ const SideBarSecondary = (props) => {
             <ListGroup.Item variant='light' className='text-center'>
                 {props.data.heading}
             </ListGroup.Item>
-            { props.data.fields.map(fields => (
+            {props.data.fields.map(fields => (
                 <ListGroup.Item key={fields.id} variant='light' action href={fields.link}>
                     {fields.label}
                 </ListGroup.Item>

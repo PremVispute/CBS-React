@@ -7,7 +7,7 @@ const NavCustCreation = () => {
   return (
     <>
         <Navbar bg='light' className='navcustcreation1' expand="lg">
-            <div className='col-md-3 me-3'>
+            <div className='col-md-3 me-5 ms-5'>
                 <InputGroup size='sm'>
                     <InputGroup.Text className='input'>Customer ID</InputGroup.Text>
                     <Form.Control
