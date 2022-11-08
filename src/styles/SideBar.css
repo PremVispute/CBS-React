@@ -3,11 +3,10 @@
     height: 94vh; 
     background-color: black; 
     width: 18rem;
-    /* width: 3rem; */
 }
 
 .sidebar-text{
-    /* display: none; */
+    display: none;
 }
 
 .sidebar-secondary{
@@ -17,9 +16,28 @@
     width: 15rem;
     height: 90%;
     font-size: 13px;
-    /* display: none; */
     max-height: 90%;
     overflow: scroll;
+}
+
+.div1.show{
+    width: 18rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+.div2.show{
+    width: 18rem;
+    transition: all 0.2s ease-in-out;
+}
+  
+.div1.hide{
+    width: 3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.div2.hide{
+    width: 3rem;
+    transition: all 0.2s ease-in-out;    
 }
 
 .link{
