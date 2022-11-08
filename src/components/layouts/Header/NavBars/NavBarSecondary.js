@@ -10,7 +10,7 @@ const NavBarSecondary = (props) => {
     <>
       <Navbar className='navcustcreation ms-5' bg='light' expand="lg">
           <Arrow />
-          <h6 className='text-center w-100 pt-1 me-5'>{label === undefined ? props.label : label} (Mode: {mode})</h6>
+          <h6 className='text-center w-100 pt-1 me-5'>{label ? label : props.label} (Mode: {mode})</h6>
       </Navbar>
     </>
   )
