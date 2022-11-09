@@ -3,16 +3,17 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-const InputCheck = (props) => {
+const InputCheck = ({data, disabled}) => {
   return (
     <>
-    <div key={props.data.id} className='col-md-5 mt-1 input'>
+    <div key={data.id} className='col-md-5 mt-1 input'>
         <InputGroup size='sm'>
-            <InputGroup.Text className='col-md-4 input'>{props.data.label}</InputGroup.Text>
+            <InputGroup.Text className='col-md-4 input'>{data.label}</InputGroup.Text>
             <Form.Control
+            disabled={disabled}
             className='input'
-            aria-label={props.data.aria}
-            aria-describedby={props.data.aria}
+            aria-label={data.aria}
+            aria-describedby={data.aria}
             />
         </InputGroup>                        
     </div>

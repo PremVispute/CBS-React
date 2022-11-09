@@ -6,11 +6,11 @@ import NavCustCreation from '../../layouts/Header/NavBars/NavCustCreation'
 import CustInfoTabs from '../../../data/CustInfoTabs'
 import NavBarSecondary from '../../layouts/Header/NavBars/NavBarSecondary'
 
-const CustomerInformation = (props) => {
+const CustomerInformation = () => {
     const [key, setKey] = useState('BasicDetails')
   return (
     <>
-    <NavBarSecondary label={props.label}/>
+    <NavBarSecondary />
     <div className='custinfo'>        
         <NavCustCreation />
         <Tabs

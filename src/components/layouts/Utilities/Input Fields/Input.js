@@ -1,16 +1,17 @@
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 
-const Input = (props) => {
+const Input = ({data, disabled}) => {
   return (
     <>
-    <div key={props.data.id} className='col-md-5 mt-1'>
+    <div key={data.id} className='col-md-5 mt-1'>
         <InputGroup size='sm'>
-            <InputGroup.Text className='col-md-4 input'>{props.data.label}</InputGroup.Text>
+            <InputGroup.Text className='col-md-4 input'>{data.label}</InputGroup.Text>
             <Form.Control
+            disabled={disabled}
             className='input'
-            aria-label={props.data.aria}
-            aria-describedby={props.data.aria}
+            aria-label={data.aria}
+            aria-describedby={data.aria}
             />
         </InputGroup>
     </div>

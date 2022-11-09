@@ -10,7 +10,7 @@ const ModePage = (props) => {
         <div className='row text-center'>
             {ModePageCRMData.map(ModePageCRMData => (
               <>
-              {ModePageCRMData.display === "Yes" ?                
+              {ModePageCRMData.display === "Yes" ?
                 <div key={ModePageCRMData.id} className='col-md-3 mt-5'>
                     <Link to={`/NavBarSecondary/${props.label}/${ModePageCRMData.label}`}>
                       <Button className='modepage-text' variant="outline-secondary" size="lg">
@@ -20,8 +20,8 @@ const ModePage = (props) => {
                     </Link>
                 </div>
                 : 
-                <></>                
-              }             
+                <></>
+              }
               </>
             ))}
         </div>

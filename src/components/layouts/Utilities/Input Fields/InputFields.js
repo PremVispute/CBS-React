@@ -5,21 +5,21 @@ import DropDown from './DropDown'
 import Input from './Input'
 import InputCheck from './InputCheck'
 
-const InputFields = (props) => {
+const InputFields = ({data, disabled}) => {
   return (
     <>
-    {props.data.type === "inputcheck" ?
-        <InputCheck data={props.data}/>
-    : props.data.type === "dropdown" ?        
-        <DropDown data={props.data}/>        
-    : props.data.type === "input" ?
-        <Input data={props.data}/>
-    : props.data.type === "date" ?
-        <Date data={props.data}/>
-    : props.data.type === "checkbox" ?
-        <CheckBox data={props.data}/>
+    {data.type === "inputcheck" ?
+        <InputCheck data={data} disabled={disabled}/>
+    : data.type === "dropdown" ?        
+        <DropDown data={data} disabled={disabled}/>        
+    : data.type === "input" ?
+        <Input data={data} disabled={disabled}/>
+    : data.type === "date" ?
+        <Date data={data} disabled={disabled}/>
+    : data.type === "checkbox" ?
+        <CheckBox data={data} disabled={disabled}/>
     : //section-spacer
-        <div key={props.data.id} className='section-spacer mt-3 mb-3'></div>
+        <div key={data.id} className='section-spacer mt-3 mb-3'></div>
     } 
     </>
   )

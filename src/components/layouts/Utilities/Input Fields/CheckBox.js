@@ -1,12 +1,13 @@
 import Form from 'react-bootstrap/Form'
 
-const CheckBox = (props) => {
+const CheckBox = ({data, disabled}) => {
   return (
     <>
-    <div key={props.data.id} className='col-md-5 pt-2'>
+    <div key={data.id} className='col-md-5 pt-2'>
         <Form.Check
-            type='checkbox'
-            label={props.data.label}
+          disabled={disabled}
+          type='checkbox'
+          label={data.label}
         />
     </div>
     <div className='col-md-1'></div>

@@ -1,15 +1,15 @@
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 
-const DropDown = (props) => {
+const DropDown = ({data, disabled}) => {
   return (
     <>
-    <div key={props.data.id} className='col-md-5 mt-1'>
+    <div key={data.id} className='col-md-5 mt-1'>
         <InputGroup size='sm'>
-            <InputGroup.Text className='col-md-4 input'>{props.data.label}</InputGroup.Text>
-            <Form.Select size="sm" id={props.data.idGiven} className='input pb-0'>
+            <InputGroup.Text className='col-md-4 input'>{data.label}</InputGroup.Text>
+            <Form.Select size="sm" id={data.idGiven} className='input pb-0' disabled={disabled}>
                 <option value="-1">Select</option>
-                {props.data.options.map(options => (
+                {data.options.map(options => (
                     <option>{options}</option>
                 ))}
             </Form.Select>
