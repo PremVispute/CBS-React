@@ -1,6 +1,6 @@
 import { faGaugeHigh, faUserLock, faFolderTree, faArrowRightFromBracket, faUsersRectangle, 
     faDesktop, faMoneyBillTransfer, faHandHoldingDollar, faMoneyCheckDollar,
-    faMoneyBillTrendUp, faDoorClosed, faBookOpen } from '@fortawesome/free-solid-svg-icons'
+    faMoneyBillTrendUp, faDoorClosed, faBookOpen, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 const SideBarMainData = [
     {
@@ -74,6 +74,12 @@ const SideBarMainData = [
         link: "#link12",
         icon: faDesktop,
         label: "Integrated Channels"
+    },
+    {
+        id: 12,
+        link: "/EditPages",
+        icon: faPenToSquare,
+        label: "Edit Pages"
     }
 ]
 

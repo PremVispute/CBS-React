@@ -141,13 +141,13 @@ const SideBarSecondaryData = [
         heading: "CRM",
         fields: [{
             id: 1,
-            link: "#/action1",
-            label: "Customer Creation (Individual)"
+            link: "/CustomerCreation: Individual",
+            label: "Customer Creation: Individual"
         },
         {
             id: 2,
             link: "#/action2",
-            label: "Customer Creation (Non-Individual)"
+            label: "Customer Creation: Non-Individual"
         },
         {
             id: 3,

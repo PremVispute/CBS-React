@@ -24,7 +24,7 @@ const CustomerInformation = () => {
                 <Tab key={CustInfoTabs.id} eventKey={CustInfoTabs.label} title={CustInfoTabs.title}>
                     {CustInfoTabs.comp}
                 </Tab>
-            ))}            
+            ))}
         </Tabs>
     </div>
     </>

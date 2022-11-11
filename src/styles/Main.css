@@ -12,6 +12,21 @@
     height: 27rem;
 }
 
+.basic-details-edit {
+    overflow: scroll;
+    height: 33rem;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    right: 4rem;
+}
+
+.edit-dropdown {
+    width: 40rem;
+    position: relative;
+    left: 15rem;
+}
+
 .tick{
     font-size: 20px;
     color: green;
@@ -48,4 +63,12 @@
 
 .page-buttons{
     --bs-btn-bg: #675cb8;
+}
+
+.edit-dropdown-width{
+    width: 18rem;
+}
+
+.edit-button{
+    margin-left: 45%;
 }

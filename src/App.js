@@ -5,6 +5,8 @@ import SideBarMain from './components/layouts/SideBar/SideBarMain'
 import Dashboard from './components/main/pages/Dashboard'
 import MainPage from './components/main/pages/MainPage'
 import CustomerInformation from './components/main/pages/CustomerInformation'
+import EditPage from './components/main/pages/EditPage'
+import BasicDetails from './components/main/pages/BasicDetails'
 
 export const DivContext = createContext()
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/NavBarSecondary/:label' element={<MainPage />} />
         <Route path='/NavBarSecondary/:label/:mode' element={<CustomerInformation />} />
+        <Route path='/EditPages' element={<EditPage />} />
+        <Route path='/BasicDetailsEdit' element={<BasicDetails mode="edit"/>} />
       </Routes>
     </DivContext.Provider>
   );

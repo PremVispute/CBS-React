@@ -1,4 +1,5 @@
 import ListGroup from 'react-bootstrap/ListGroup'
+import { Link } from 'react-router-dom'
 import '../../../styles/SideBar.css'
 
 const SideBarSecondary = (props) => {
@@ -10,9 +11,11 @@ const SideBarSecondary = (props) => {
                 {props.data.heading}
             </ListGroup.Item>
             {props.data.fields.map(fields => (
-                <ListGroup.Item key={fields.id} variant='light' action href={fields.link}>
-                    {fields.label}
-                </ListGroup.Item>
+                <Link className='link' to={`/NavBarSecondary/${fields.label}`}>
+                    <ListGroup.Item key={fields.id} variant='light' action>
+                        {fields.label}
+                    </ListGroup.Item>
+                </Link>
             ))}
         </ListGroup>
     </div>

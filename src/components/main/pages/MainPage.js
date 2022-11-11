@@ -10,7 +10,7 @@ const MainPage = () => {
     setDiv("div1")
   return (
     <>
-        <NavBarSecondary/>
+        <NavBarSecondary />
         <ModePage label={label}/>
     </>
   )
