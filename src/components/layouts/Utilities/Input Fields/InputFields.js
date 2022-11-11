@@ -1,4 +1,5 @@
 import '../../../../styles/Main.css'
+import PageButton from './PageButton'
 import CheckBox from './CheckBox'
 import Date from './Date'
 import DropDown from './DropDown'
@@ -14,6 +15,8 @@ const InputFields = ({data, disabled}) => {
         <DropDown data={data} disabled={disabled}/>        
     : data.type === "input" ?
         <Input data={data} disabled={disabled}/>
+    : data.type === "button" ?
+        <PageButton data={data}/>
     : data.type === "date" ?
         <Date data={data} disabled={disabled}/>
     : data.type === "checkbox" ?

@@ -206,6 +206,31 @@ const BasicDetailsData = [
         label: "Form 60 reasons",
         idGiven: 'form60reasons',
         options: ["Head Office", "Main Office", "Second Office"]
+    },
+    {
+        id: 27,
+        type: "button",
+        label: "Submit"
+    },
+    {
+        id: 28,
+        type: "button",
+        label: "Authorize"
+    },
+    {
+        id: 29,
+        type: "button",
+        label: "Reset"
+    },
+    {
+        id: 30,
+        type: "button",
+        label: "Reject"
+    },
+    {
+        id: 31,
+        type: "button",
+        label: "Update"
     }
 ]
 
