@@ -58,3 +58,10 @@
 .arrow{
     cursor: pointer;
 }
+
+.naveditpage{
+    position: absolute;
+    top: 42px;
+    width: 82rem;
+    border-bottom: groove;
+}
