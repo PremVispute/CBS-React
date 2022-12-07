@@ -10,6 +10,8 @@
 .basic-details{
     overflow: scroll;
     height: 27rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .basic-details-edit {
@@ -18,7 +20,8 @@
     position: absolute;
     top: 6rem;
     left: 4rem;
-    right: 4rem;
+    width: 95%;
+    max-width: 100%;
 }
 
 .edit-dropdown {

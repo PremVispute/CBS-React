@@ -1,13 +1,12 @@
-import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
+import { Container, InputGroup, Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
 const Date = ({data, disabled}) => {
-  // const { connectors: {connect, drag} } = useNode();
+  const { connectors: {connect, drag} } = useNode()
   return (
     <>
-      {/* <div key={data.id} ref={ref => connect(drag(ref))}> */}
-        <div className='col-md-5 mt-1'>
+      <div className='col-md-6 row' ref={ref => connect(drag(ref))}>
+        <div className='col-md-10 mt-1'>
           <InputGroup size='sm'>
             <InputGroup.Text className='col-md-4 input'>{data.label}</InputGroup.Text>
             <Form.Control
@@ -20,7 +19,7 @@ const Date = ({data, disabled}) => {
           </InputGroup>
         </div>
         <div className='col-md-1'></div>
-      {/* </div> */}
+      </div>
     </>
   )
 }
