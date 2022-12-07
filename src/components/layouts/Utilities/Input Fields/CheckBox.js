@@ -1,4 +1,4 @@
-import { Container, Form } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
 const CheckBox = ({data, disabled}) => {

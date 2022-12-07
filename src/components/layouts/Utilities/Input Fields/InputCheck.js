@@ -1,4 +1,4 @@
-import { Col, Container, InputGroup, Form } from 'react-bootstrap'
+import { Col, InputGroup, Form } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useNode } from "@craftjs/core"

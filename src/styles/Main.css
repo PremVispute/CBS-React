@@ -20,7 +20,7 @@
     position: absolute;
     top: 6rem;
     left: 4rem;
-    width: 95%;
+    width: 92%;
     max-width: 100%;
 }
 
@@ -78,4 +78,13 @@
 
 .page-button{
     width: 15rem;
+}
+
+.toolbar{
+    position: absolute;
+    top: 6rem;
+    width: 40px;
+    right: 4px;
+    height: 30rem;
+    font-size: 30px;
 }

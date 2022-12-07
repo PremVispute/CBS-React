@@ -1,4 +1,4 @@
-import { Container, InputGroup, Form } from 'react-bootstrap'
+import { InputGroup, Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
 const Input = ({data, disabled}) => {

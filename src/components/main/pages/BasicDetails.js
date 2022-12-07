@@ -13,6 +13,7 @@ import DropDown from '../../../components/layouts/Utilities/Input Fields/DropDow
 import Input from '../../../components/layouts/Utilities/Input Fields/Input'
 import InputCheck from '../../../components/layouts/Utilities/Input Fields/InputCheck'
 import { Container } from 'react-bootstrap'
+import ToolBar from '../../layouts/Utilities/ToolBar'
 
 const BasicDetails = (props) => {
   const { mode } = useParams()
@@ -27,10 +28,11 @@ const BasicDetails = (props) => {
 
   return (
     <>
-      <Editor resolver={{ InputFields, PageButton, CheckBox, Date, DropDown, Input, InputCheck, InputGroup, Container }} indicator={{'success': '#2d9d78', 'error': '#e34850'}}>
+      <Editor resolver={{ InputFields, PageButton, CheckBox, Date, DropDown, Input, InputCheck, InputGroup, Container }}>
         {props.mode==="edit" ? <NavBarEditPage /> : <></>}
+        {props.mode==="edit" ? <ToolBar /> : <></>}
         <Frame>
-          <Element id="Container" is={Container} canvas className={props.mode==="edit" ? "basic-details-edit row" : "basic-details row align-content-start"}>
+          <Element is={Container} canvas className={props.mode==="edit" ? "basic-details-edit row" : "basic-details row align-content-start"}>
             {BasicDetailsData.map(BasicDetailsData => (
                 <InputFields data={BasicDetailsData} disabled={disabled}/>
             ))}
