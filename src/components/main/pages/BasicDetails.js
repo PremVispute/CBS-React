@@ -18,6 +18,7 @@ import ToolBar from '../../layouts/Utilities/ToolBar'
 const BasicDetails = (props) => {
   const { mode } = useParams()
   const [ disabled, setDisabled ] = useState(true)
+  const [editingState, seteditingState] = useState(1);
 
   useEffect(() => {
     if(mode==="Create" || mode==="Edit")
@@ -29,7 +30,7 @@ const BasicDetails = (props) => {
   return (
     <>
       <Editor resolver={{ InputFields, PageButton, CheckBox, Date, DropDown, Input, InputCheck, InputGroup, Container }}>
-        {props.mode==="edit" ? <NavBarEditPage /> : <></>}
+        {props.mode==="edit" ? <NavBarEditPage editingState={editingState}/> : <></>}
         {props.mode==="edit" ? <ToolBar /> : <></>}
         <Frame>
           <Element is={Container} canvas className={props.mode==="edit" ? "basic-details-edit row" : "basic-details row align-content-start"}>

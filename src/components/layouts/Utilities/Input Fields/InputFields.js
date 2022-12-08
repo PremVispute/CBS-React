@@ -9,17 +9,17 @@ import InputCheck from './InputCheck'
 const InputFields = ({data, disabled}) => {
   return (
     <>
-        {data.type === "inputcheck" ?
+        {data.fieldType === "inputcheck" ?
             <InputCheck data={data} disabled={disabled}/>
-        : data.type === "dropdown" ?
+        : data.fieldType === "dropdown" ?
             <DropDown data={data} disabled={disabled}/>
-        : data.type === "input" ?
+        : data.fieldType === "input" ?
             <Input data={data} disabled={disabled}/>
-        : data.type === "button" ?
+        : data.fieldType === "button" ?
             <PageButton data={data}/>
-        : data.type === "date" ?
+        : data.fieldType === "date" ?
             <Date data={data} disabled={disabled}/>
-        : data.type === "checkbox" ?
+        : data.fieldType === "checkbox" ?
             <CheckBox data={data} disabled={disabled}/>
         : //section-spacer
             <div key={data.id} className='section-spacer mt-3 mb-3'></div>
