@@ -84,8 +84,9 @@
     position: absolute;
     top: 6rem;
     width: 40px;
-    right: 4px;
-    height: 30rem;
-    font-size: 30px;
-    color: #3b3a39;
+    right: 15px;
+}
+
+.tool-button{
+    font-size: 25px;
 }

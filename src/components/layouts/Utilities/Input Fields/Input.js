@@ -1,7 +1,7 @@
 import { InputGroup, Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
-const Input = ({data, disabled}) => {
+export const Input = ({data, disabled}) => {
   const { connectors: {connect, drag} } = useNode()
   return (
     <>
@@ -23,10 +23,17 @@ const Input = ({data, disabled}) => {
   )
 }
 
-Input.craft = {
-  rules: {
-    canDrag: (node) => node.data.props.Input !== "Drag"
-  }
+export const InputDefaultProps = {
+  data: {
+    label: 'example',
+    aria: 'example'
+  },
+  disabled: true
 }
 
-export default Input
+Input.craft = {
+  props: InputDefaultProps,
+  // rules: {
+  //   canDrag: (node) => node.data.props.Input !== "Drag"
+  // }
+}

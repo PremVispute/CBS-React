@@ -1,10 +1,11 @@
 import '../../../../styles/Main.css'
 import PageButton from './PageButton'
-import CheckBox from './CheckBox'
-import Date from './Date'
-import DropDown from './DropDown'
-import Input from './Input'
-import InputCheck from './InputCheck'
+
+import { CheckBox } from './CheckBox'
+import { Date } from './Date'
+import { DropDown } from './DropDown'
+import { Input } from './Input'
+import { InputCheck } from './InputCheck'
 
 const InputFields = ({data, disabled}) => {
   return (

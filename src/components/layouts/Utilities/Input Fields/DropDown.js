@@ -1,7 +1,7 @@
 import { InputGroup, Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
-const DropDown = ({data, disabled}) => {
+export const DropDown = ({data, disabled}) => {
   const { connectors: {connect, drag} } = useNode()
   return (
     <>
@@ -23,10 +23,17 @@ const DropDown = ({data, disabled}) => {
   )
 }
 
-DropDown.craft = {
-  rules: {
-    canDrag: (node) => node.data.props.DropDown !== "Drag"
-  }
+export const DropDownDefaultProps = {
+  data: {
+    label: 'example',
+    aria: 'example'
+  },
+  disabled: true
 }
 
-export default DropDown
+DropDown.craft = {
+  props: DropDownDefaultProps,
+  // rules: {
+  //   canDrag: (node) => node.data.props.DropDown !== "Drag"
+  // }
+}

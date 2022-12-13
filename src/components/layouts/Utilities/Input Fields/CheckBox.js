@@ -1,7 +1,7 @@
 import { Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
-const CheckBox = ({data, disabled}) => {
+export const CheckBox = ({data, disabled}) => {
   const { connectors: {connect, drag} } = useNode()
   return (
     <>
@@ -19,10 +19,16 @@ const CheckBox = ({data, disabled}) => {
   )
 }
 
-CheckBox.craft = {
-  rules: {
-    canDrag: (node) => node.data.props.CheckBox !== "Drag"
-  }
+export const CheckBoxDefaultProps = {
+  data: {
+    label: 'example'
+  },
+  disabled: true
 }
 
-export default CheckBox
+CheckBox.craft = {
+  props: CheckBoxDefaultProps,
+  // rules: {
+  //   canDrag: (node) => node.data.props.CheckBox !== "Drag"
+  // }
+}

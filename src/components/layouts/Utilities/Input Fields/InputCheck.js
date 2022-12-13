@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useNode } from "@craftjs/core"
 
-const InputCheck = ({data, disabled}) => {
+export const InputCheck = ({data, disabled}) => {
   const { connectors: {connect, drag} } = useNode()
   return (
     <>
@@ -28,10 +28,17 @@ const InputCheck = ({data, disabled}) => {
   )
 }
 
-InputCheck.craft = {
-  rules: {
-    canDrag: (node) => node.data.props.InputCheck !== "Drag"
-  }
+export const InputCheckDefaultProps = {
+  data: {
+    label: 'example',
+    aria: 'example'
+  },
+  disabled: true
 }
 
-export default InputCheck
+InputCheck.craft = {
+  props: InputCheckDefaultProps,
+  // rules: {
+  //   canDrag: (node) => node.data.props.InputCheck !== "Drag"
+  // }
+}

@@ -1,7 +1,7 @@
 import { InputGroup, Form } from 'react-bootstrap'
 import { useNode } from "@craftjs/core"
 
-const Date = ({data, disabled}) => {
+export const Date = ({data, disabled}) => {
   const { connectors: {connect, drag} } = useNode()
   return (
     <>
@@ -24,10 +24,17 @@ const Date = ({data, disabled}) => {
   )
 }
 
-Date.craft = {
-  rules: {
-    canDrag: (node) => node.data.props.Date !== "Drag"
-  }
+export const DateDefaultProps = {
+  data: {
+    label: 'example',
+    aria: 'example'
+  },
+  disabled: true
 }
 
-export default Date
+Date.craft = {
+  props: DateDefaultProps,
+  // rules: {
+  //   canDrag: (node) => node.data.props.Date !== "Drag"
+  // }
+}
